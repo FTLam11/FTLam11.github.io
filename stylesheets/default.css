@@ -1,0 +1,14 @@
+header {
+  background-color: #0F7F64;
+  text-align: center;
+}
+header h1 {
+  font-family: Cabin, sans-serif;
+  padding: 10px;
+  margin: 0px;
+}
+header h2 {
+  font-family: 'Indie Flower', cursive;
+  padding: 10px;
+  margin: 0px;
+}
