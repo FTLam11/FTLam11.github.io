@@ -16,3 +16,22 @@ header a {
   text-decoration: none;
   color: black;
 }
+nav {
+  background-color: #1EFFC7;
+}
+#menu {
+  padding: 0;
+}
+#menu li {
+  display: inline;
+}
+#menu li a {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+}
+#menu li a:hover {
+    background-color: #FF541E;
+}
