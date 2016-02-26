@@ -62,3 +62,8 @@ footer {
   text-align: center;
   padding-bottom: 10px;
 }
+footer img {
+  width: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
