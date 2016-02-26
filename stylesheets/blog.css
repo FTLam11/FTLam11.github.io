@@ -15,4 +15,6 @@ section p {
 }
 section ul {
   margin-left: 15%;
+  list-style-type: circle;
+  padding-left: 3%;
 }
