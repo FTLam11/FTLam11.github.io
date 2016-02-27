@@ -10,6 +10,10 @@ section h2 {
   top: 40%;
   position: relative;
 }
+section a {
+  text-decoration: none;
+  color: navy;
+}
 .wrapper {
   width: 75%;
   left: 12.5%;
@@ -29,4 +33,8 @@ section h2 {
   position: relative;
   margin-left: 10px;
   margin-right: 10px;
+  overflow: hidden;
+}
+.post:hover {
+  background-color: #FF2442;
 }
