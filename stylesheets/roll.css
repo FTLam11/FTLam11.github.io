@@ -5,4 +5,14 @@ section h1 {
 section h2 {
   text-align: center;
   font-size: small;
+  margin: 0px;
+  top: 40%;
+  position: relative;
+}
+.post {
+  border: 1px solid navy;
+  width: 150px;
+  height: 150px;
+  margin-left: 20%;
+  display: inline-block;
 }
