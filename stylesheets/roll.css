@@ -9,6 +9,15 @@ section h2 {
   top: 40%;
   position: relative;
 }
+.wrapper {
+  border: 1px solid black;
+  width: 75%;
+  left: 12.5%;
+  position: relative;
+}
+.row {
+  display: block;
+}
 .post {
   border: 1px solid navy;
   width: 150px;
