@@ -1,4 +1,4 @@
-[My Site](http://ftlam11.github.io/blog/git.html)
+[My Site](http://ftlam11.github.io/index.html)
 
 ####1. What did you learn about CSS padding, borders, and margin by doing this challenge?
 
