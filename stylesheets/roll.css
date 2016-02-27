@@ -1,6 +1,7 @@
 section h1 {
   text-align: center;
   margin-top: 0px;
+  margin-bottom: 0px;
 }
 section h2 {
   text-align: center;
@@ -10,18 +11,22 @@ section h2 {
   position: relative;
 }
 .wrapper {
-  border: 1px solid black;
   width: 75%;
   left: 12.5%;
+  margin: 0px;
   position: relative;
 }
 .row {
   display: block;
+  margin-top: 10px;
+  text-align: center;
 }
 .post {
   border: 1px solid navy;
   width: 150px;
   height: 150px;
-  margin-left: 20%;
   display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
 }
