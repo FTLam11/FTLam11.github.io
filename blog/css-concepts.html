@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Road to 9K+ Web Developer: Frank Lam</title>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/default.css">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/blog.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css"><!--Link to h1 font-->
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'><!--Link to h2 font-->
+  <link href='https://fonts.googleapis.com/css?family=Hind|Oxygen' rel='stylesheet' type='text/css'><!--Link to section font-->
+</head>
+<body>
+  <header>
+    <h1><a href = "../index.html">Road to 9K+ Web Developer: Frank Lam</a></h1>
+    <h2>Chicago > Skokie > Urbana-Champaign > Washington D.C. > Taipei > ?</h2>  
+  </header>
+  <nav>
+    <ul id = "menu">
+      <li><a href = "#">About Me</a></li>
+      <li><a href = "index.html">Blog</a></li>
+      <li><a href = "#">Resume</a></li>
+      <li><a href = "#">Projects</a></li>
+      <li><a href = "#">Contact</a></li>
+    </ul>  
+  </nav>
+  <section>
+    <h1>ID vs Class: Sailin On</h1>
+    <h2>02/27/2016 19:00 PST</h4>
+    <article>
+      <img src = "../imgs/selector.gif" alt = "Diagram of CSS selector and declaration"/>
+      <p>Enter Phase 0 Week 3 of Dev Bootcamp. This post addresses best practices for two CSS selectors. The image above, courtesy of <a href = "http://www.w3schools.com/css/css_syntax.asp"</a>w3schools.com</a> breaks down a CSS rule.</p>
+      <ul>
+        <li>What are the differences between an ID selector and a class selector?</li>
+        <li>When should I use an ID selector?</li>
+        <li>When should I use a class selector?</li>
+      </ul>
+      <h1>What are the differences between an ID selector and a class selector?</h1>
+      <p>CSS allows us to create rules on how to change the appearance of our webpages. A CSS rule consists of a selector and a declaration. The selector determines what scope of HTML elements a declaration will apply to, while a declaration specifies what properties and values each selected element will take on. An ID selector applies to any element that has a matching ID attribute. A class selector applies to any element that has a matching class attribute. In short, IDs are unique while classes are generic!</p>
+      <h1>When should I use an ID selector?</h1>
+      <p>Let's first recognize two important characteristics for IDs. First, an element may only have one ID attribute. Second, each page can only have one instance of a particular ID. Our HTML code will fail validation if we use an ID more than once on a page. An ID selector should be used to style a unique element. Here is an example for using an ID selector to style the navigation bar of this webpage.</p>
+      <div class = "code center"><pre><code>#menu {
+  padding: 0;
+  text-align: center;
+}
+#menu li {
+  display: inline;
+}
+#menu li a {
+  background-color: #1EFFC7;
+  color: navy;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+#menu li a:hover {
+    background-color: #FF2442;
+}</code></pre></div>
+      <h1>When should I use a class selector?</h1>
+      <p>In contrast, a class selector is meant for use among one to many elements. An element may also have multiple class attributes. Classes are an efficient way to style multiple elements at once regardless of the element type. Assuming a webpage has multiple div elements, we can style these together or separately using classes. Here is an example for using class selectors to style the following code block. Two different classes are being used to style a div element. The code block below is using both code and center classes.</p>
+      <div class = "code center"><pre><code>.code {
+  font-family: monospace;
+  background-color: gray;
+  display: block;
+  position: relative;
+  text-align: left;
+}
+.center {
+    margin: auto;
+    width: 30%;
+    border: 3px solid navy;
+    padding: 10px;
+}
+</code></pre></div>
+    </article>
+  </section>
+</body>
+</html>
