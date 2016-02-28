@@ -20,3 +20,16 @@ section ul {
   list-style-type: circle;
   padding-left: 3%;
 }
+.code {
+  font-family: monospace;
+  background-color: gray;
+  display: block;
+  position: relative;
+  text-align: left;
+}
+.center {
+    margin: auto;
+    width: 30%;
+    border: 3px solid navy;
+    padding: 10px;
+}
