@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Road to 9K+ Web Developer: Frank Lam</title>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/default.css">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/blog.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet" type="text/css"><!--Link to h1 font-->
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'><!--Link to h2 font-->
+  <link href='https://fonts.googleapis.com/css?family=Hind|Oxygen' rel='stylesheet' type='text/css'><!--Link to section font-->
+</head>
+<body>
+  <header>
+    <h1><a href = "../index.html">Road to 9K+ Web Developer: Frank Lam</a></h1>
+    <h2>Chicago > Skokie > Urbana-Champaign > Washington D.C. > Taipei > ?</h2>  
+  </header>
+  <nav>
+    <ul id = "menu">
+      <li><a href = "#">About Me</a></li>
+      <li><a href = "index.html">Blog</a></li>
+      <li><a href = "#">Resume</a></li>
+      <li><a href = "#">Projects</a></li>
+      <li><a href = "#">Contact</a></li>
+    </ul>  
+  </nav>
+  <section>
+    <h1>Arrays and Hashes: Shit From An Old Notebook</h1>
+    <h2>03/05/2016 11:00 PST</h2>
+    <article>
+      <img src = "../imgs/doublenickels.jpg" alt = "Double Nickels on the Dime"/>
+      <p>Enter Phase 0 Week 4 of Dev Bootcamp. This post addresses two Ruby collections: arrays and hashes.</p>
+      <ul>
+        <li>What is an array?</li>
+        <li>What is a hash?</li>
+        <li>Which should I use?</li>
+      </ul>
+      <h1>What is an array?</h1>
+      <p>An array is a collection of data arranged by index. Typically we use arrays to collect numbers or strings, and we can reference specific elements by the index.</p>
+      <div class = "code center"><pre><code>>> my_array = ["D Boon", "Mike Watt", "George Hurley", 3]
+=> ["D Boon", "Mike Watt", "George Hurley", 3]
+>> my_array[0]
+=> "D Boon"
+>> my_array[1..2]
+=> ["Mike Watt", "George Hurley"]</code></pre></div>
+      <h1>What is a hash?</h1>
+      <p>A hash is a collection of data arranged in key/value pairs. Similar to how arrays can be referenced by index, hashes can be referenced by key. In this way, each key in a hash must be unique, i.e., there can be no duplicate keys in a given hash. In contrast to arrays, hash keys are interesting in that they don't have to be a number, a key can also be a string or symbol. Symbols in particular are often used for hashes for a few reasons: symbols cannot be changed once they are created, only one copy of any symbol can exist at a time, and compared to strings as keys have better performance.</p>
+      <div class = "code center"><pre><code>>> my_hash = {guitar: "D Boon", bass: "Mike Watt", drums: "George Hurley"}
+=> {:guitar=>"D Boon", :bass=>"Mike Watt", :drums=>"George Hurley"}
+>> my_hash[:guitar]
+=> "D Boon"
+>> my_hash.each {|instrument, name| puts "#{name} plays #{instrument} for Minutemen."}
+D Boon plays guitar for Minutemen.
+Mike Watt plays bass for Minutemen.
+George Hurley plays drums for Minutemen.
+</code></pre></div>
+      <h1>Which should I use?</h1>
+      <p>When deciding between which collection to use, consider these points:</p>
+      <ul>
+        <li>Does my data make use of labels? In the above code blocks, a hash would be more suited since we can associate instruments with members and vice verssa. We are limited to one or the other when using a single array.</li>
+        <li>Does my data behave as a stack or queue? Arrays would be more suitable since there are methods like push and pop.</li>
+        <li>Does my data need to be ordered? Though hashes are now ordered by their insertion order, arrays are typically used for ordered data with available methods like sort.</li>
+      </ul>
+    </article>
+  </section>
+</body>
+</html>
