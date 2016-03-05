@@ -43,7 +43,7 @@
 >> my_array[1..2]
 => ["Mike Watt", "George Hurley"]</code></pre></div>
       <h1>What is a hash?</h1>
-      <p>A hash is a collection of data arranged in key/value pairs. Similar to how arrays can be referenced by index, hashes can be referenced by key. In this way, each key in a hash must be unique, i.e., there can be no duplicate keys in a given hash. In contrast to arrays, hash keys are interesting in that they don't have to be a number, a key can also be a string or symbol. Symbols in particular are often used for hashes for a few reasons: symbols cannot be changed once they are created, only one copy of any symbol can exist at a time, and compared to strings as keys have better performance.</p>
+      <p>A hash is a collection of data arranged in key/value pairs. Similar to how arrays can be referenced by index, hashes can be referenced by key. In this way, each key in a hash must be unique, i.e., there can be no duplicate keys in a given hash. In contrast to arrays, hash keys are interesting in that they don't have to be a number, a key can also be a string or symbol. Symbols in particular are often used for hashes for a few reasons: symbols cannot be changed once they are created, only one copy of any symbol can exist at a time, and symbols have better performance than strings-as-keys.</p>
       <div class = "code center"><pre><code>>> my_hash = {guitar: "D Boon", bass: "Mike Watt", drums: "George Hurley"}
 => {:guitar=>"D Boon", :bass=>"Mike Watt", :drums=>"George Hurley"}
 >> my_hash[:guitar]
