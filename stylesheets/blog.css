@@ -1,3 +1,7 @@
+section {
+  margin-left: 15%;
+  margin-right: 15%;
+}
 section h1 {
   text-align: center;
   margin-top: 0px;
@@ -11,14 +15,15 @@ article img {
 }
 section p {
   text-align: justify;
-  margin-left: 15%;
-  margin-right: 15%;
   margin-bottom: 1%;
 }
 section ul {
   margin-left: 15%;
   list-style-type: circle;
   padding-left: 3%;
+}
+section li {
+  width: 80%;
 }
 .code {
   font-family: monospace;
