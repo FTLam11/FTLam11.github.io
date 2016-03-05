@@ -26,10 +26,12 @@ section ul {
   display: block;
   position: relative;
   text-align: left;
+  overflow: auto;
 }
 .center {
     margin: auto;
     width: 30%;
     border: 3px solid navy;
     padding: 10px;
+    margin-bottom: 1%;
 }
