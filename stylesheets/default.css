@@ -35,7 +35,7 @@ nav {
 .menu li a {
   background-color: #1EFFC7;
   color: navy;
-  padding: 1%;
+  padding: 0.5%;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
@@ -70,7 +70,7 @@ footer {
   top: 94%;
 }
 footer img {
-  width: 4%;
+  width: 3%;
   margin-left: 0.5%;
   margin-right: 0.5%
 }
