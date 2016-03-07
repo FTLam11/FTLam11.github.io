@@ -2,18 +2,18 @@ html {
   background-color: #8CFFDA;
 }
 header {
-  background-color: #0F7F64;
+  background-color: #0CC0FF;
   text-align: center;
   color: white;
 }
 header h1 {
   font-family: Cabin, sans-serif;
-  padding-top: 10px;
+  padding-top: 0.5%;
   margin: 0px;
 }
 header h2 {
   font-family: 'Indie Flower', cursive;
-  padding-bottom: 10px;
+  padding-bottom: 0.5%;
   margin: 0px;
 }
 header a {
@@ -35,7 +35,7 @@ nav {
 .menu li a {
   background-color: #1EFFC7;
   color: navy;
-  padding: 10px 20px;
+  padding: 1%;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
@@ -45,30 +45,34 @@ nav {
 }
 section {
   background-color: #8CFFDA;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
   /*font-family: 'Hind', sans-serif;*/
   font-family: 'Oxygen', sans-serif;
 }
 section img {
-  width: 50%;
+  width: 33%;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 20px;
+  padding-bottom: 0.5%;
 }
 section p {
   text-align: center;
 }
 footer {
-  background-color: #8CFFDA;
+  background-color: #0CC0FF;
   text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+  position: fixed;
+  width: 100%;
+  top: 94%;
 }
 footer img {
-  width: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
+  width: 4%;
+  margin-left: 0.5%;
+  margin-right: 0.5%
 }
 @media screen and (max-width: 940px) {
   #side-a {
