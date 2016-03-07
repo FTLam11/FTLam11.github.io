@@ -70,3 +70,13 @@ footer img {
   margin-left: 10px;
   margin-right: 10px;
 }
+@media screen and (max-width: 940px) {
+  #side-a {
+  float: none;
+  display: inline;
+}
+  #side-a li{
+  display: inline;
+  padding-right: 10px;
+}
+}
