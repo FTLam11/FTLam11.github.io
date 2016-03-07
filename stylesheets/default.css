@@ -65,7 +65,7 @@ footer {
   text-align: center;
   padding-bottom: 0.5%;
   padding-top: 0.5%;
-  height: 60px;
+  height: 15%;
 }
 footer img {
   width: 50px;
@@ -76,8 +76,8 @@ html, body {
 	height: 100%;
 }
 .wrapper {
-	min-height: 100%;
-	margin: 0 auto -60px; /* the bottom margin is the negative value of the footer's height */
+	min-height: 85%;
+	margin: 0 auto -15%; /* the bottom margin is the negative value of the footer's height */
 }
 @media screen and (max-width: 940px) {
   #side-a {
