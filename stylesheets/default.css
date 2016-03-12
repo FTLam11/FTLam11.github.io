@@ -50,7 +50,6 @@ nav {
 }
 section {
   background-color: #8CFFDA;
-  padding-top: 0.5%;
   padding-bottom: 0.5%;
   /*font-family: 'Hind', sans-serif;*/
   font-family: 'Oxygen', sans-serif;
@@ -61,6 +60,11 @@ section img {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0.5%;
+}
+.banner {
+  width: 100%;
+  display: block;
+  height: 800px;
 }
 section p {
   text-align: center;
