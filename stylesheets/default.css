@@ -61,6 +61,13 @@ section img {
   margin-right: auto;
   padding-bottom: 0.5%;
 }
+.grape {
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  padding-top: 5%;
+}
 .banner {
   width: 100%;
   display: block;
