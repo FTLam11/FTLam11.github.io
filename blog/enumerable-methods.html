@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Road to 9K+ Web Developer: Frank Lam</title>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/default.css">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/blog.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Indie+Flower|Hind|Oxygen" rel="stylesheet" type="text/css"><!--Link to h1/h2/section font-->
+</head>
+<body>
+  <header>
+    <h1><a href = "../index.html">Road to 9K+ Web Developer: Frank Lam</a></h1>
+    <h2>Chicago > Skokie > Urbana-Champaign > Washington D.C. > Taipei > ?</h2>  
+  </header>
+  <nav>
+    <ul class = "menu">
+      <li><a href = "#">About Me</a></li>
+      <li><a href = "index.html">Blog</a></li>
+      <li><a href = "#">Resume</a></li>
+      <li><a href = "#">Projects</a></li>
+      <li><a href = "../contact.html">Contact</a></li>
+    </ul>  
+  </nav>
+  <section>
+    <h1>Enumerable#grep: Soul Flower</h1>
+    <h2>03/12/2016 16:30 PST</h2>
+    <article>
+      <img src = "../imgs/bizarre.tiff" alt = "Bizarre Ride II The Pharcyde"/>
+      <p>Enter Phase 0 Week 5 of Dev Bootcamp. This post addresses one method from the Enumerable module: grep.</p>
+      <ul>
+        <li>What does grep do? + Examples</li>
+      </ul>
+      <h1>What does grep do? + Examples</h1>
+      <p>Let's first take a look at a few examples.</p>
+      <div class = "code center"><pre><code>>> [6, 14, 28, 47, 12].grep(5..15)
+=> [6, 14, 12]
+>> [1,"one",2,"TWO",3,"tHree"].grep(String)
+=> ["one", "TWO", "tHree"]</code></pre></div>
+      <p>Given an input and argument, grep returns an array of each input element that matches the argument. In the first example, we took an input array of just numbers, called grep on it, and passed a range object as the argument. Grep then output each input element that falls between the range of 5 and 15, yielding [6, 14, 12]. In the second example, we took an input array of both numbers and strings, called grep on it, and passes a class object as the argument. Grep then outputs each element that is a String object, yielding ["one", "TWO", "tHree"].</p>
+      <div class = "code center"><pre><code>>> [1,"one",2,"TWO",3,"tHree"].grep(String){|string| string.upcase}
+=> ["ONE", "TWO", "THREE"]</code></pre></div>
+      <p>As shown above, if we provide an optional block to grep, the output from grep will be passed to the block. ["one", "TWO", "tHree"] will get passed to the block, have upcase called, and result in a final output of ["ONE", "TWO", "THREE"].</p>
+      <div class = "code center"><pre><code>>> ['aardvark','banana','cow','dork','3.14','Blue-42',"bonanza"].grep(/^b/)
+=> ["banana", "bonanza"]
+>> ['aardvark','banana','cow','dork','3.14','Blue-42'].grep(/\d$/)
+=> ["3.14", "Blue-42"]</code></pre></div>
+      <p>Last but not least is the combination of grep with regular expressions as the argument. In the first example, we want to output all array elements that start with 'b'. In the second example we want to output all array elements that ends with a number.</p>
+      <p>In conclusion, Enumerable#grep is a very handy tool for returning a subset of the original input object. It's even more verstaile in that it can accept an optional code block do perform further transformations too!</p>
+    </article>
+  </section>
+</body>
+</html>
