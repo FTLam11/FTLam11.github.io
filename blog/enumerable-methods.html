@@ -36,7 +36,7 @@
 => [6, 14, 12]
 >> [1,"one",2,"TWO",3,"tHree"].grep(String)
 => ["one", "TWO", "tHree"]</code></pre></div>
-      <p>Given an input and argument, grep returns an array of each input element that matches the argument. In the first example, we took an input array of just numbers, called grep on it, and passed a range object as the argument. Grep then output each input element that falls between the range of 5 and 15, yielding [6, 14, 12]. In the second example, we took an input array of both numbers and strings, called grep on it, and passes a class object as the argument. Grep then outputs each element that is a String object, yielding ["one", "TWO", "tHree"].</p>
+      <p>Given an input and argument, grep returns an array of each input element that matches the argument. In the first example, we took an input array of just numbers, called grep on it, and passed a range object as the argument. Grep then outputs each input element that falls between the range of 5 and 15, yielding [6, 14, 12]. In the second example, we took an input array of both numbers and strings, called grep on it, and passed a class object as the argument. Grep then outputs each element that is a String object, yielding ["one", "TWO", "tHree"].</p>
       <div class = "code center"><pre><code>>> [1,"one",2,"TWO",3,"tHree"].grep(String){|string| string.upcase}
 => ["ONE", "TWO", "THREE"]</code></pre></div>
       <p>As shown above, if we provide an optional block to grep, the output from grep will be passed to the block. ["one", "TWO", "tHree"] will get passed to the block, have upcase called, and result in a final output of ["ONE", "TWO", "THREE"].</p>
@@ -44,7 +44,7 @@
 => ["banana", "bonanza"]
 >> ['aardvark','banana','cow','dork','3.14','Blue-42'].grep(/\d$/)
 => ["3.14", "Blue-42"]</code></pre></div>
-      <p>Last but not least is the combination of grep with regular expressions as the argument. In the first example, we want to output all array elements that start with 'b'. In the second example we want to output all array elements that ends with a number.</p>
+      <p>Last but not least is the combination of grep with regular expressions as the argument. In the first example, we want to output all array elements that start with 'b'. In the second example we want to output all array elements that end with a number. There are many different tools that regular expressions provide, but that is out of scope for this post.</p>
       <p>In conclusion, Enumerable#grep is a very handy tool for returning a subset of the original input object. It's even more verstaile in that it can accept an optional code block do perform further transformations too!</p>
     </article>
   </section>
