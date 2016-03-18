@@ -68,6 +68,12 @@ section img {
   margin-right: auto; 
   padding-top: 5%;
 }
+.about {
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+}
 .banner {
   width: 100%;
   display: block;
