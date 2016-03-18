@@ -95,6 +95,7 @@ footer img {
 }
 .qa {
   font-size: large;
+  text-align: left;
 }
 @media screen and (max-width: 940px) {
   #side-a {
