@@ -93,6 +93,9 @@ footer img {
   margin-left: 0.5%;
   margin-right: 0.5%
 }
+.qa {
+  font-size: large;
+}
 @media screen and (max-width: 940px) {
   #side-a {
   float: none;
