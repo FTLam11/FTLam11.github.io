@@ -69,11 +69,10 @@ section img {
   padding-top: 5%;
 }
 .about {
-  width: 25%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  margin-right: 2%;
   padding-top: 1%;
+  float: left;
 }
 .banner {
   width: 100%;
