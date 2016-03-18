@@ -72,7 +72,8 @@ section img {
   width: 25%;
   display: block;
   margin-left: auto;
-  margin-right: auto; 
+  margin-right: auto;
+  padding-top: 1%;
 }
 .banner {
   width: 100%;
