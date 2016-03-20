@@ -12,6 +12,7 @@ section h2 {
 }
 article h1 {
   text-align: left;
+  border-bottom: 1px solid black;
 }
 article img {
   width: 40%;
@@ -38,7 +39,7 @@ section li {
 .center {
   margin: auto;
   width: 100%;
-  border: 1px solid navy;
+  border: 1px dashed navy;
   padding: 10px;
   margin-bottom: 1%;
 }
