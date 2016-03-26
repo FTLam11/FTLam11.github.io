@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Road to 9K+ Web Developer: Frank Lam</title>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/default.css">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/blog.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Indie+Flower|Hind|Oxygen" rel="stylesheet" type="text/css"><!--Link to h1/h2/section font-->
+</head>
+<body>
+  <header>
+    <h1><a href = "../index.html">Road to 9K+ Web Developer: Frank Lam</a></h1>
+    <h2>Chicago > Skokie > Urbana-Champaign > Washington D.C. > Taipei > ?</h2>  
+  </header>
+  <nav>
+    <ul class = "menu">
+      <li><a href = "../about.html">About Me</a></li>
+      <li><a href = "index.html">Blog</a></li>
+      <li><a href = "#">Resume</a></li>
+      <li><a href = "../projects.html">Projects</a></li>
+      <li><a href = "../contact.html">Contact</a></li>
+    </ul>  
+  </nav>
+  <section>
+    <h1>Comparing Ruby Classes and JavaScript Constuctors: Rest Stop</h1>
+    <h2>03/26/2016 13:00 PST</h2>
+<article>
+      <img src = "../imgs/yinyang.png" alt = "Ruby vs JavaScript"/>
+      <p>Enter Phase 0 Week 7 of Dev Bootcamp. This post compares Ruby classes and JavaScript constructors.</p>
+      <ul>
+        <li>Example comparisons modeling a pair of headphones</li>
+        <li>Observations</li>
+      </ul>
+      <h1>Example comparisons modeling a pair of headphones</h1>
+      <p>Last week, I learned about Ruby classes and a little bit about how classes fit into object-oriented programming. This week, I started learning JavaScript and encountered constructors. I'm still in the process of understanding how OOP is implemented in JavaScript, but I wrote up an example to document what I know thus far. Below are Ruby and JavaScript versions of modeling a pair of headphones. I left some comments in the code to try and point out some differences.</p>
+      <div class = "code center"><pre><code>class RubyHeadphoneSpecs
+  attr_accessor :weight, :freq_response
+  
+  def initialize(brand, model)
+    @brand = brand
+    @model = model
+  end
+  
+  def what_am_i_playing
+    puts "Offseason"
+  end
+end
+
+prototype = RubyHeadphoneSpecs.new("Sennheiser","HD-555")
+#line below will give wrong number of arguments (0 for 2) (ArgumentError)
+proto = RubyHeadphoneSpecs.new
+
+#use attr methods to write attributes for weight and frequency response
+prototype.weight = "260 grams"
+prototype.freq_response = ["15 Hz","28 kHz"]
+
+#undefined method impedance, this was never defined in our class
+prototype.impedance = "100 Ohm"
+
+
+#driver code
+prototype.what_am_i_playing
+puts prototype.inspect
+
+
+#output
+#Offseason
+#\RubyHeadphoneSpecs: 0x005615cda9ac98 @brand="Sennheiser",
+#@model="HD-555", @weight="260 grams", @freq_response=["15 Hz", "28 kHz"]
+
+#JavaScript version below
+
+function JSHeadphoneSpecs(brand, model) {
+  this.brand = brand;
+  this.model = model;
+}
+
+JSHeadphoneSpecs.prototype.whatAmIPlaying = function() {
+  console.log("Offseason");
+};
+
+var prototype = new JSHeadphoneSpecs("Sennheiser","HD-555");
+var proto = new JSHeadphoneSpecs();
+
+//adding properties to prototype on-the-fly
+prototype.weight = "260 grams";
+prototype.freq_response = ["15 Hz","28 kHz"];
+
+console.log(prototype);
+prototype.whatAmIPlaying();
+proto.whatAmIPlaying();
+
+//output
+/*
+{ brand: 'Sennheiser',
+  model: 'HD-555',
+  weight: '260 grams',
+  freq_response: [ '15 Hz', '28 kHz' ] }
+Offseason
+Offseason
+*/
+</code></pre></div>
+      <h1>Observations</h1>
+      <ul>
+        <li>In Ruby, when an initialize method is defined, it can take arguments that will be passed to any new instance. By including two parameters, brand and model, Ruby expects to see these two parameters when we create a new instance of headphones. I noticed in JavaScript, although I also included the same two parameters as part of the constructor, I was still able to create the proto instance without specifying a brand or model. I did not expect this behavior from JavaScript.</li>
+        <li>The way instance methods are defined is also slightly different. In Ruby, instance methods for a given class are defined within the class itself. Above, I defined what_am_i_playing inside the class. In the JavaScript version I had to define the instance method on the constructor function's prototype property. It makes sense for the instance method not to be included in the constructor function, since the constructor only manufactures new instances. I should look at how a Ruby class is implemented in JavaScript.</li>
+        <li>Finally, I was able to add new properties that weren't originally defined in the constructor function on-the-fly. Above, I added two properties weight and freq_response. When printing the object prototype to console, it did in fact have both the newly defined properties along with the default brand and model. In Ruby, if a class doesn't already have an attribute writer method for the property, an error occurs as shown above with impedance. I suppose this is a big boon in the way JavaScript implements OOP by having this flexibility and classless approach. This definitely warrants continued investigation.</li>
+      </ul>
+    </article>
+  </section>
+</body>
+</html>
