@@ -22,89 +22,88 @@
     </ul>  
   </nav>
   <section>
-    <h1>Regular Expressions: Yo Soy Milk</h1>
-    <h2>03/30/2016 11:00 PST</h2>
+    <h1>Bubble Sort Algorithm: Yo Soy Milk</h1>
+    <h2>04/01/2016 16:00 PST</h2>
     <article>
       <img src = "#" alt = ""/>
-      <p>Enter Phase 0 Week 8 of Dev Bootcamp. This post introduces regular expressions.</p>
+      <p>Enter Phase 0 Week 8 of Dev Bootcamp. This post gives a high level overview of bubble sort.</p>
       <ul>
-        <li>Example comparisons modeling a pair of headphones</li>
+        <li>Quick explanation of bubble sort</li>
+        <li>Ruby implementation and examples</li>
         <li>Observations</li>
       </ul>
-      <h1>Example comparisons modeling a pair of headphones</h1>
-      <p>Last week, I learned about Ruby classes and a little bit about how classes fit into object-oriented programming. This week, I started learning JavaScript and encountered constructors. I'm still in the process of understanding how OOP is implemented in JavaScript, but I wrote up an example to document what I know thus far. Below are Ruby and JavaScript versions of modeling a pair of headphones. I left some comments in the code to try and point out some differences.</p>
-      <div class = "code center"><pre><code>class RubyHeadphoneSpecs
-  attr_accessor :weight, :freq_response
-  
-  def initialize(brand, model)
-    @brand = brand
-    @model = model
-  end
-  
-  def what_am_i_playing
-    puts "Offseason"
+      <h1>Quick explanation of bubble sort</h1>
+      <p>For this week's DBC blog post, we were given a bunch of potential topics to write about. Sorting algorithms was one of the topics I had interest in, so here is a post about bubble sort. After spending some time skimming over some of the most well-known sorting algorithms, I felt bubble sort was the easiest to explain and write about. Using an array of unsorted numbers as an example, bubble sort compares two adjacent elements and puts them in ascending order. This comparison is repeated until no swaps are made. This indicates the array is already sorted, since no further swapping of elements was required.</p>
+      <p>I'm still not an expert at describing the performance of algorithms, so I won't mention Big O notation. The best and worst case scenarios were the easiest ways for me to characterize bubble sort's performance. An example of the best case scenario would be an object that is already sorted, since no swaps will be made and bubble sort can be performed in one pass. An example of the worst case scenario would be an object that is sorted in reverse order, since the most swaps will occur. I'll use three examples below to better explain these scenarios.</p>
+      <h1>Ruby implementation and examples</h1>
+      <div class = "code center"><pre><code># Initial
+# def bubble_sort(arr)
+#   p arr
+#   loop do
+#     swap = false
+#     for i in 1..arr.length-1
+#       if arr[i-1] > arr[i]
+#         temp = arr[i]
+#         arr[i] = arr[i-1]
+#         arr[i-1] = temp
+#         swap = true
+#         p arr
+#       end
+#     end
+#     break if swap == false
+#   end
+#   arr
+# end
+
+# Refactored
+def bubble_sort(arr)
+  p arr
+  loop do
+    swap = false
+    for i in 1..arr.length-1
+      if arr[i-1] > arr[i]
+        arr[i],arr[i-1] = arr[i-1],arr[i]
+        swap = true
+        p arr
+      end
+    end
+    break if swap == false
   end
 end
 
-prototype = RubyHeadphoneSpecs.new("Sennheiser","HD-555")
-#line below will give wrong number of arguments (0 for 2) (ArgumentError)
-proto = RubyHeadphoneSpecs.new
-
-#use attr methods to write attributes for weight and frequency response
-prototype.weight = "260 grams"
-prototype.freq_response = ["15 Hz","28 kHz"]
-
-#undefined method impedance, this was never defined in our class
-prototype.impedance = "100 Ohm"
-
-
-#driver code
-prototype.what_am_i_playing
-puts prototype.inspect
-
-
+# Driver code
+# unsorted generic case
+bubble_sort([5,1,4,2,8])
 #output
-#Offseason
-#\RubyHeadphoneSpecs: 0x005615cda9ac98 @brand="Sennheiser",
-#@model="HD-555", @weight="260 grams", @freq_response=["15 Hz", "28 kHz"]
+[5, 1, 4, 2, 8]
+[1, 5, 4, 2, 8]
+[1, 4, 5, 2, 8]
+[1, 4, 2, 5, 8]
+[1, 2, 4, 5, 8]
 
-#JavaScript version below
+# reverse sorted worst case
+bubble_sort([5,4,3,2,1])
+[5, 4, 3, 2, 1]
+[4, 5, 3, 2, 1]
+[4, 3, 5, 2, 1]
+[4, 3, 2, 5, 1]
+[4, 3, 2, 1, 5]
+[3, 4, 2, 1, 5]
+[3, 2, 4, 1, 5]
+[3, 2, 1, 4, 5]
+[2, 3, 1, 4, 5]
+[2, 1, 3, 4, 5]
+[1, 2, 3, 4, 5]
 
-function JSHeadphoneSpecs(brand, model) {
-  this.brand = brand;
-  this.model = model;
-}
-
-JSHeadphoneSpecs.prototype.whatAmIPlaying = function() {
-  console.log("Offseason");
-};
-
-var prototype = new JSHeadphoneSpecs("Sennheiser","HD-555");
-var proto = new JSHeadphoneSpecs();
-
-//adding properties to prototype on-the-fly
-prototype.weight = "260 grams";
-prototype.freq_response = ["15 Hz","28 kHz"];
-
-console.log(prototype);
-prototype.whatAmIPlaying();
-proto.whatAmIPlaying();
-
-//output
-/*
-{ brand: 'Sennheiser',
-  model: 'HD-555',
-  weight: '260 grams',
-  freq_response: [ '15 Hz', '28 kHz' ] }
-Offseason
-Offseason
-*/
+# sorted best case
+bubble_sort([3,3,3,3,3])
+[3, 3, 3, 3, 3]
 </code></pre></div>
       <h1>Observations</h1>
       <ul>
-        <li>In Ruby, when an initialize method is defined, it can take arguments that will be passed to any new instance. By including two parameters, brand and model, Ruby expects to see these two parameters when we create a new instance of headphones. I noticed in JavaScript, although I also included the same two parameters as part of the constructor, I was still able to create the proto instance without specifying a brand or model. I did not expect this behavior from JavaScript.</li>
-        <li>The way instance methods are defined is also slightly different. In Ruby, instance methods for a given class are defined within the class itself. Above, I defined what_am_i_playing inside the class. In the JavaScript version I had to define the instance method on the constructor function's prototype property. It makes sense for the instance method not to be included in the constructor function, since the constructor only manufactures new instances. I should look at how a Ruby class is implemented in JavaScript.</li>
-        <li>Finally, I was able to add new properties that weren't originally defined in the constructor function on-the-fly. Above, I added two properties weight and freq_response. When printing the object prototype to console, it did in fact have both the newly defined properties along with the default brand and model. In Ruby, if a class doesn't already have an attribute writer method for the property, an error occurs as shown above with impedance. I suppose this is a big boon in the way JavaScript implements OOP by having this flexibility and classless approach. This definitely warrants continued investigation.</li>
+        <li>Walking through the unsorted generic case, the first pass will have two swaps: (5,4) and (5,2). The second pass will have one swap (4,2). The third pass has no swaps, and hence the array is sorted.</li>
+        <li>By looking at the output from the reverse sorted worst case, we can see there are many more swaps required when using bubble sort. Even though the first example and this example both have give elements, the number of swaps necessary greatly increases in the second example.</li>
+        <li>Finally, the sorted best case has only one pass required, since no swaps are necessary.</li>
       </ul>
     </article>
   </section>
