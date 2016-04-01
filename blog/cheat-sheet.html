@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Road to 9K+ Web Developer: Frank Lam</title>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/default.css">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/blog.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Indie+Flower|Hind|Oxygen" rel="stylesheet" type="text/css"><!--Link to h1/h2/section font-->
+</head>
+<body>
+  <header>
+    <h1><a href = "../index.html">Road to 9K+ Web Developer: Frank Lam</a></h1>
+    <h2>Chicago > Skokie > Urbana-Champaign > Washington D.C. > Taipei > ?</h2>  
+  </header>
+  <nav>
+    <ul class = "menu">
+      <li><a href = "../about.html">About Me</a></li>
+      <li><a href = "index.html">Blog</a></li>
+      <li><a href = "#">Resume</a></li>
+      <li><a href = "../projects.html">Projects</a></li>
+      <li><a href = "../contact.html">Contact</a></li>
+    </ul>  
+  </nav>
+  <section>
+    <h1>DBC Cheat Sheet</h1>
+    <h2>03/31/2016 13:00 PST</h2>
+    <article>
+      <img src = "../imgs/cheat.png" alt = "My cheat sheet"/>
+      <div class = "code center"><pre><code>>> a = "The quick brown fox jumps over the lazy dog"
+=> "The quick brown fox jumps over the lazy dog"
+>> a.gsub!(/[aeiu]/,'o')
+=> "Tho qoock brown fox jomps ovor tho lozy dog"
+>> a.gsub!(/\s/,'*')
+=> "Tho*qoock*brown*fox*jomps*ovor*tho*lozy*dog"
+>> a.gsub!(/o{2}/,'00')
+=> "Tho*q00ck*brown*fox*jomps*ovor*tho*lozy*dog"
+=> "The cat chased the mouse deep down into the catacombs. The cat would reach a state\nof catharsis if it were to catch that mouse."
+
+
+
+>> b.gsub!(/\bcat\b/,'dog')
+=> "The dog chased the mouse deep down into the catacombs. The dog would reach a state\nof catharsis if it were to catch that mouse."
+>> b.gsub!(/\bcat+a/,'bee')
+=> "The dog chased the mouse deep down into the beecombs. The dog would reach a state\nof catharsis if it were to catch that mouse."
+
+
+
+>> c = "hahaaahaha"
+=> "hahaaahaha"
+>> c.gsub(/a+/,'a')
+=> "hahahaha"
+
+
+
+>> d = "hip hop hippity hop ship shop shhhoop de shhhhhhop"
+=> "hip hop hippity hop ship shop shhhoop de shhhhhhop"
+>> d.gsub(/sh{1,3}/,'h')
+=> "hip hop hippity hop hip hop hoop de hhhhop"
+>> d.gsub!(/sh{1,6}/,'h')
+=> "hip hop hippity hop hip hop hoop de hop"
+
+
+
+>> e = 'Binh said, "Diuuuuuuu". Minh said, "Diuuuu!". Nguyen said, "Duuuuuuuuuu". I said, "Damn it, say DIU!'
+=> "Binh said, \"Diuuuuuuu\". Minh said, \"Diuuuu!\". Nguyen said, \"Duuuuuuuuuu\". I said, \"Damn it, say DIU!"
+>> e.gsub(/Di*u+!*/,'DIU!')
+=> "Binh said, \"DIU!\". Minh said, \"DIU!\". Nguyen said, \"DIU!\". I said, \"Damn it, say DIU!"
+
+
+
+>> f = "10000000"
+=> "10000000"
+>> f.gsub(/0{6}/,' million')
+=> "1 million0"
+>> f.gsub!(/0{6}\b/,' million')
+=> "10 million"
+
+
+
+>> g = "Hello world hello universe"
+=> "Hello world hello universe"
+>> g.gsub(/^Hello/,'Good bye')
+=> "Good bye world hello universe"
+
+
+
+>> h = "www.devbootcamp"
+=> "www.devbootcamp"
+>> h.gsub(/$/,'.com')
+=> "www.devbootcamp.com"
+
+
+
+>> i = "Respect my 1337 skills n00b!"
+=> "Respect my 1337 skills n00b!"
+>> i.gsub(/\d{4}/,'elite')
+=> "Respect my elite skills n00b!"
+
+
+
+>> j = "batman catman fatman hatman ratman yatman"                                                                                                                                                                                              
+=> "batman catman fatman hatman ratman yatman"
+>> j.gsub(/[chy]atman/,'splatman')
+=> "batman splatman fatman splatman ratman splatman"</code></pre></div>
+    </article>
+  </section>
+</body>
+</html>
