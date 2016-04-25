@@ -29,6 +29,9 @@
       <p>Enter Phase 1 Week 2 of DBC. In preparation for the Week 3 Assessment, this post includes notes about:</p>
       <ul>
         <a href = "#Self"><li>Self</li></a>
+        <a href = "#ARGV"><li>CLI ARGV</li></a>
+        <a href = "#Rspec"><li>Rspec</li></a>
+        <a href = "#CSV"><li>Working with CSV files</li></a>
       </ul>
       <h1 id = "Self">Self</h1>
       <div class = "code center"><pre><code>
@@ -93,7 +96,43 @@ p Homie.all_homies
 #output
 [#<Homie:0x0055bc76e16a58 @name="Phife Dawg">, #<Homie:0x0055bc76e16a30 @name="Pete Rock">, #<Homie:0x0055bc76e16a08 @name="Imani">]
       </code></pre></div>
-      <h1></h1>
+      
+      <h1 id = "ARGV">CLI ARGV</h1>
+      <div class = "code center"><pre><code>
+#Set ARGV to a variable and reference by index as necessary
+
+name = ARGV[0].downcase.strip
+puts "The first option is options[0]"
+
+
+if ARGV.any?
+  #do stuff
+else
+  #call method requiring valid input
+  puts <<- EOT
+  
+  EOT
+end
+      </code></pre></div>
+    
+  <h1 id = "Rspec">Rspec</h1>
+  <p><a href = "http://betterspecs.org/">Better Specs</a></p>
+      
+  <h1 id = "CSV">Working with CSV files</h1>
+  <div class = "code center"><pre><code>
+#CSV files as Ruby objects function can be iterated over, behaving as row arrays
+#CSV files typically contain a header row followed by data
+
+#Importing first row of CSV files as keys
+csv = CSV.open(@file, :headers => true, :header_converters => :symbol, :converters => :all)
+csv_hash = csv.to_a.map {|row| row.to_hash }
+
+#Appending to an existing CSV file
+CSV.open(@file, "a+") do |csv|
+  csv << person_hash
+end
+    
+  </code></pre></div>
     </article>
   </section>
 </body>
