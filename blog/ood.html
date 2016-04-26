@@ -28,7 +28,24 @@
       <img src = "#" alt = ""/>
       <p>Enter Phase 1 Week 2 of DBC. In preparation for the Week 3 Assessment, this post includes notes about:</p>
       <ul>
+        <a href = "#Note"><li>Setup and Approach</li></a>
         <a href = "#Self"><li>Self</li></a>
+        <a href = "#Recursion"><li>Recursion</li></a>
+        <a href = "#ARGV"><li>CLI ARGV</li></a>
+        <a href = "#Rspec"><li>Rspec</li></a>
+        <a href = "Yield"><li>Ruby Yield</li></a>
+        <a href = "#CSV"><li>Working with CSV files</li></a>
+        <a href = "#SQL"><li>SQL</li></a>
+      </ul>
+      <h1 id = "Note">Setup and Approach</h1>
+      <ul>
+        <li>Examine code base by running it and inspecting the existing tests</li>
+        <li>Label Input, Output, data types, and side effects of all existing methods</li>
+        <li>Evaluate each method and class in terms of Model, View, Controller</li>
+        <li>When working with classes, think in terms of required messages and public interfaces</li>
+        <li>For algorithm-heavy problems, pseudocode and apply TDD as necessary</li>
+        <li>Review DBC Talks to see alternate approaches and step-by-step implementation</li>
+        <li>Refactoring: use descriptive variable names, DRY code</li>
       </ul>
       <h1 id = "Self">Self</h1>
       <div class = "code center"><pre><code>
@@ -93,7 +110,74 @@ p Homie.all_homies
 #output
 [#<Homie:0x0055bc76e16a58 @name="Phife Dawg">, #<Homie:0x0055bc76e16a30 @name="Pete Rock">, #<Homie:0x0055bc76e16a08 @name="Imani">]
       </code></pre></div>
-      <h1></h1>
+      
+      <h1 id = "Recursion">Recursion</h1>
+      <div class = "code center"><pre><code>
+def prime_factors(integer,prime_factor_array = [])
+  
+  counter = 2
+  
+  #Identify the base case
+  return prime_factor_array if integer == 1
+  
+  #Solve a smaller version of the problem
+  while counter <= integer
+    if integer % counter == 0
+      prime_factor_array << counter
+      quotient = integer/counter
+      break
+    else
+      counter += 1
+    end
+  end
+  
+  #Apply recursion and pass the newly gained information up the chain
+  prime_factors(quotient, prime_factor_array)
+  
+end        
+      </code></pre></div>
+      
+      <h1 id = "ARGV">CLI ARGV</h1>
+      <div class = "code center"><pre><code>
+#Set ARGV to a variable and reference by index as necessary
+
+name = ARGV[0].downcase.strip
+puts "The first option is options[0]"
+
+
+if ARGV.any?
+  #do stuff
+else
+  #call method requiring valid input
+  puts <<- EOT
+  
+  EOT
+end
+      </code></pre></div>
+    
+  <h1 id = "Rspec">Rspec</h1>
+  <p><a href = "http://betterspecs.org/">Better Specs</a></p>
+  
+  <h1 id = "#Yield">Ruby Yield</h1>
+  <p><a href = "https://github.com/chi-fiery-skippers-2016/implement-enumerable-challenge/blob/pair-FTLam11%2Ceealexander2/enumerating_methods.rb">Yield examples</a></p>
+  <h1 id = "CSV">Working with CSV files</h1>
+  <div class = "code center"><pre><code>
+#CSV files as Ruby objects function can be iterated over, behaving as row arrays
+#CSV files typically contain a header row followed by data
+
+#Importing first row of CSV files as keys
+csv = CSV.open(@file, :headers => true, :header_converters => :symbol, :converters => :all)
+csv_hash = csv.to_a.map {|row| row.to_hash }
+
+#Appending to an existing CSV file
+CSV.open(@file, "a+") do |csv|
+  csv << person_hash
+end
+    
+  </code></pre></div>
+    
+    <h1 id = "SQL">SQL</h1>
+    <p><a href = "https://www.sqlite.org/lang.html">SQL Query Flowcharts</a></p>
     </article>
   </section>
 </body>
