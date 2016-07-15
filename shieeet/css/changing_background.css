@@ -1,24 +1,36 @@
 .head {
-  animation: colorchange 50s; /* animation-name followed by duration in seconds*/
+  animation: colorchange 40s; /* animation-name followed by duration in seconds*/
      /* you could also use milliseconds (ms) or something like 2.5s */
-  -webkit-animation: colorchange 50s; /* Chrome and Safari */
+  -webkit-animation: colorchange 40s; /* Chrome and Safari */
   animation-iteration-count: infinite;
 }
 
 @keyframes colorchange
 {
   0%   {background: red;}
-  25%  {background: yellow;}
-  50%  {background: blue;}
-  75%  {background: green;}
+  10%   {background: aquamarine;}
+  20%   {background: aqua;}
+  30%   {background: gold;}
+  40%   {background: indigo;}
+  50%  {background: yellow;}
+  60%  {background: blue;}
+  70%  {background: palegreen;}
+  80%  {background: green;}
+  90%  {background: maroon;}
   100% {background: red;}
 }
 
 @-webkit-keyframes colorchange /* Safari and Chrome - necessary duplicate */
 {
   0%   {background: red;}
-  25%  {background: yellow;}
-  50%  {background: blue;}
-  75%  {background: green;}
+  10%   {background: aquamarine;}
+  20%   {background: aqua;}
+  30%   {background: gold;}
+  40%   {background: indigo;}
+  50%  {background: yellow;}
+  60%  {background: blue;}
+  70%  {background: palegreen;}
+  80%  {background: green;}
+  90%  {background: maroon;}
   100% {background: red;}
 }
