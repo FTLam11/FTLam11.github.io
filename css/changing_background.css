@@ -1,6 +1,5 @@
 .head {
   animation: colorchange 40s; /* animation-name followed by duration in seconds*/
-     /* you could also use milliseconds (ms) or something like 2.5s */
   -webkit-animation: colorchange 40s; /* Chrome and Safari */
   animation-iteration-count: infinite;
 }
