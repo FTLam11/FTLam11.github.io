@@ -2,7 +2,7 @@
 layout: post
 title:  "String Interpolation and References"
 date:   2016-11-07
-tags: [ruby, javascript]
+tags: [ruby]
 ---
 Curly braces can be omitted when interpolated strings contain a reference to an instance, class, or global variable.
 
