@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Road to 9K+ Web Developer: Frank Lam</title>
+  <meta charset="UTF-8">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/default.css">
+  <link rel = "stylesheet" type = "text/css" href = "../stylesheets/blog.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Indie+Flower|Hind|Oxygen" rel="stylesheet" type="text/css"><!--Link to h1/h2/section font-->
+</head>
+<body>
+  <header>
+    <h1><a href = "../index.html">Road to 9K+ Web Developer: Frank Lam</a></h1>
+    <h2>Chicago > Skokie > Urbana-Champaign > Washington D.C. > Taipei > ?</h2>  
+  </header>
+  <nav>
+    <ul class = "menu">
+      <li><a href = "../about.html">About Me</a></li>
+      <li><a href = "index.html">Blog</a></li>
+      <li><a href = "#">Resume</a></li>
+      <li><a href = "../projects.html">Projects</a></li>
+      <li><a href = "../contact.html">Contact</a></li>
+    </ul>  
+  </nav>
+  <section>
+    <h1>Ruby Classes: We've Got Jazz</h1>
+    <h2>03/20/2016 10:00 PST</h2>
+    <article>
+      <img src = "../imgs/class.png" alt = "Ruby hierachy"/>
+      <p>Enter Phase 0 Week 6 of Dev Bootcamp. This post addresses Ruby classes.</p>
+      <ul>
+        <li>What is a class and why should I use it?</li>
+        <li>The song and playlist classes</li>
+      </ul>
+      <h1>What is a class?</h1>
+      <p>A class is an object that models a slice of reality by specifying properties for objects it spawns as well as defining what can be performed by or done to the created objects. This is significant, because the Ruby hierarchy is a web of relationships between different Ruby objects, classes included. Inheritance is outside the scope of this post, but essentially the relationships provide functionality for different classes. The String and Array classes are two great examples of two objects that we use all the time. Each class is also an object and has many methods available to each respective class. We know the String class has methods like String#downcase and the Array class has Array#uniq.</p>
+      <p>I'll also briefly mention that classes can borrow functionality from Modules like Enumerable, attaining even more functionality. With different classes, we can expect different behavior and know what messages each class understands and therefore what the classes can do.</p>
+      <p>Having already mentioned the importance of the object concept, this leads to the topic of object-oriented programming. By leveraging classes we focus on writing code that emphasizes modeling things in the world as objects as well as what these objects can do. In other words create objects and then tell those objects to do things for us. We say that classes generate instances of themselves, with each instance having its own properties. All instances of the same class will share the same functionality.</p>
+      <h1>The song and playlist classes</h1>
+      <p>Below, I created two classes Song and Playlist. A song can have many different properties, but this example only uses the typical ones like artist, album, year, etc... I kept the Playlist class simple, just including a few methods and also borrowing from the Array class. Let's see the example code and then I'll break down what's happening after.</p>
+      <div class = "code center"><pre><code>class Song
+  attr_accessor :artist, :album, :year, :track, :title, :label, :genre
+  def initialize(song_title)
+    @title = song_title
+  end
+
+  def display_info
+    p "#{@artist} - #{@track} - #{@title} - #{@genre}"
+    p "From the album '#{@album}' released by #{@label} in #{@year}"
+  end
+end
+
+class Playlist
+  def initialize
+    @playlist = []
+  end
+  
+  def add_playlist(*song_title)
+    @playlist.push(song_title)
+  end
+
+  def view_playlist
+    p @playlist
+  end
+end
+
+bo = Song.new("Buggin' Out")
+bo.artist = "A Tribe Called Quest"
+bo.album = "The Low End Theory"
+bo.year = "1991"
+bo.track = "2"
+bo.label = "Jive Records"
+bo.genre = "Hip hop"
+bo.display_info
+
+fb = Song.new("4 Better or 4 Worse")
+fb.artist = "The Pharcyde"
+fb.album = "Bizarre Ride II The Pharcyde"
+fb.year = "1992"
+fb.track = "4"
+fb.label = "Delicious"
+fb.genre = "Hip hop"
+fb.display_info
+
+hip = Playlist.new
+hip.add_playlist(bo.title,fb.title)
+hip.view_playlist
+</code></pre></div>
+      <ul>
+        <li>First, attr_accessor is a shortcut that creates two methods, one that allows us to read the property, and another that lets us set the property. Thus, attr_accessor will allow us to both read and set artist, album, year, track, etc... This becomes important once we try adding songs to a playlist.</li>
+        <li>Typically, classes have an initialize method that provides some minimum information when creating an object of a given class. Here, when we use Song.new to create a song object, we initialize it with a song title that gets stored as an instance variable @title. We use instance variables to store information about instances of a class. In addition, the scope for this information is the entire class. So now we have our first song property song title.</li>
+        <li>The display_info method simply prints out all the properties of a song. Instance variables make this possible. If we used local variables, we'd have to pass each one as an argument, which can get very cumbersome.</li>
+        <li>The Playlist class allows songs to be added. In the initialize method, I create a blank array for the new playlist.</li>
+        <li>The add_playlist method takes any number of songs as an argument and then adds each song to the playlist.</li>
+        <li>Finally, the view_playlist method prints the playlist to console.</li>
+      </ul>
+      <p>The rest of the code is driver code that allows us to create two song objects, set their properties, add them to a playlist, and then view the playlist. The output is shown below:</p>
+      <div class = "code center"><pre><code>:> ruby song.rb 
+"A Tribe Called Quest - 2 - Buggin' Out - Hip hop"
+"From the album 'The Low End Theory' released by Jive Records in 1991"
+"The Pharcyde - 4 - 4 Better or 4 Worse - Hip hop"
+"From the album 'Bizarre Ride II The Pharcyde' released by Delicious in 1992"
+[["Buggin' Out", "4 Better or 4 Worse"]]</code></pre></div>
+      <p>The attr_accessor came into play when I set each song property, and when I added the songs to the Hip hop playlist. Each time a song property is set, this is made possible by utilizing the setter method that was created for us via attr_accessor. I also called the reader methods when adding bo.title and fb.title to the playlist. This called title on both bo and fb, returning their song titles.</p>
+      <p>Looking forward to next week!</p>
+    </article>
+  </section>
+</body>
+</html>

@@ -1,0 +1,116 @@
+html {
+  background-color: #8CFFDA;
+	position: relative;
+	min-height: 100%;
+}
+body {
+    margin: 0 0 60px; /* bottom = footer height */
+}
+header {
+  background-color: #0CC0FF;
+  text-align: center;
+  color: white;
+}
+header h1 {
+  font-family: Cabin, sans-serif;
+  padding-top: 0.5%;
+  margin: 0px;
+}
+header h2 {
+  font-family: 'Indie Flower', cursive;
+  padding-bottom: 0.5%;
+  margin: 0px;
+}
+header a {
+  text-decoration: none;
+  color: white;
+}
+nav {
+  background-color: #1EFFC7;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.menu {
+  padding: 0;
+  text-align: center;
+}
+.menu li {
+  display: inline;
+}
+.menu li a {
+  background-color: #1EFFC7;
+  color: navy;
+  padding: 0.5%;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.menu li a:hover {
+    background-color: #FF2442;
+}
+section {
+  background-color: #8CFFDA;
+  padding-bottom: 0.5%;
+  /*font-family: 'Hind', sans-serif;*/
+  font-family: 'Oxygen', sans-serif;
+}
+section img {
+  width: 33%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.5%;
+}
+.grape {
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  padding-top: 5%;
+}
+.about {
+  position: relative;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  margin-top: 3%;
+  padding-top: 1%;
+  float: left;
+}
+.banner {
+  width: 100%;
+  display: block;
+}
+section p {
+  text-align: center;
+}
+footer {
+  background-color: #0CC0FF;
+  text-align: center;
+  padding-bottom: 0.5%;
+  padding-top: 0.5%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+}
+footer img {
+  width: 50px;
+  margin-top: 0.5%;
+  margin-left: 0.5%;
+  margin-right: 0.5%
+}
+.qa {
+  font-size: large;
+  text-align: left;
+}
+@media screen and (max-width: 940px) {
+  #side-a {
+  float: none;
+  display: inline;
+}
+  #side-a li{
+  display: inline;
+  padding-right: 10px;
+}
+}
