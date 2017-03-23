@@ -1,2 +1,9 @@
 # FTLam11.github.io
-DBC Phase 0 Site
+
+Welcome to my personal web development blog.
+
+I learn stuff.
+
+I blog it.
+
+Ya dig?
