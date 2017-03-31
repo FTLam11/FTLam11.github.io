@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ruby Short Methods"
+title:  "Ruby Object Ids"
 date:   2016-1-20
 tags: [ruby]
 ---
