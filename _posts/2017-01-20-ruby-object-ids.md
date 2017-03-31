@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Ruby Object Ids"
-date:   2016-1-20
+date:   2017-1-20
 tags: [ruby]
 ---
 I assumed Fixnums in Ruby had the same object_id as their value. However, check this out:
