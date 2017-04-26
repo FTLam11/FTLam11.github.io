@@ -316,7 +316,7 @@ pre {
 .highlight {
   background: #fff; }
   .highlighter-rouge .highlight {
-    background: #eef; }
+    background: #39a94a; }
   .highlight .c {
     color: #998;
     font-style: italic; }
@@ -334,7 +334,7 @@ pre {
     color: #999;
     font-weight: bold; }
   .highlight .c1 {
-    color: #998;
+    color: #000;
     font-style: italic; }
   .highlight .cs {
     color: #999;
