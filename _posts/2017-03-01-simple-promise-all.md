@@ -4,7 +4,7 @@ title:  "Simple promise all"
 date:   2017-03-01
 tags: [javascript]
 ---
-A naive version of Promise.all() using built-in HTTP node module. Once all asynchronous requests have returned, it spits everything out.
+A naive version of `Promise.all()` using built-in HTTP node module. Once all asynchronous requests have returned, it spits everything out using the `print()` callback.
 
 {% highlight javascript %}
 var http = require('http');
