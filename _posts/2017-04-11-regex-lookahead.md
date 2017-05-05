@@ -2,7 +2,7 @@
 layout: post
 title:  "Lookahead regex"
 date:   2017-04-11
-tags: [javascript][ruby]
+tags: [javascript, ruby]
 ---
 Had a situation where I wanted to split a guitar tuning string into an array of individual notes.
 
