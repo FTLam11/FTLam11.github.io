@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "THIS 3"
+title:  "Exploring the Rails Magic"
 date:   2017-04-19
 tags: [ruby]
 ---
