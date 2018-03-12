@@ -15,7 +15,7 @@ Noting highlights from the book Metaprogramming Ruby (2nd Edition).
 
 {% highlight ruby %}
 # passing false below only returns instance methods defined by
-ourselves, skipping inherited instance methods
+# ourselves, skipping inherited instance methods
 
 my_object.class.instance_methods(false)
 
