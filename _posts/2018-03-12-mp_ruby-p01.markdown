@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "Metaprogramming Ruby Part 1"
+date:   2018-03-12
+tags: [ruby]
+---
+Noting highlights from the book Metaprogramming Ruby (2nd Edition).
+
+# Chapter 1: The M Word
+
+* Language constructs - variables, classes, methods
+* Runtime for Ruby is quite different from compiled languages like C++ in that
+  during runtime, many language constructs are still available for
+  introspection
+
+{% highlight ruby %}
+# passing false below only returns instance methods defined by
+ourselves, skipping inherited instance methods
+
+my_object.class.instance_methods(false)
+
+# can peek at an object's instance variables
+
+my_object.instance_variables
+{% endhighlight %}
+
+* The M word **Metaprogramming** is writing code that manipulates
+language constructs at runtime.
