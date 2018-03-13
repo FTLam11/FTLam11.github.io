@@ -1,0 +1,35 @@
+---
+layout: post
+title:  "Metaprogramming Ruby Part 2"
+date:   2018-03-13
+tags: [ruby]
+---
+Noting highlights from the book Metaprogramming Ruby (2nd Edition).
+
+# Chapter 2. Monday: The Object Model
+
+* "For class, the core job is to move you in the context of the class, where you can define methods."
+* **Open Class Method**: can always reopen an existing class and modify them on the fly
+
+{% highlight ruby %}
+String.instance_methods.grep /^z/
+=> []
+
+class String
+  def zang!
+    upcase!
+  end
+end
+
+String.instance_methods.grep /^z/
+=> [:zang!]
+
+'zang'.zang!
+=> "ZANG"
+{% endhighlight %}
+
+* **Monkeypatch**: Abusing Open Class method in a harmful way, e.g.,
+overwriting existing methods of the same name and cause a previously
+reliable and stable method to break
+* The superclass of a class is Module - a class is simply a Module with
+3 additional instance methods: new, allocate, superclass
