@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Metaprogramming Ruby Part 2"
-date:   2018-03-13
+date:   2018-03-14
 tags: [ruby]
 ---
 Noting highlights from the book Metaprogramming Ruby (2nd Edition).
@@ -32,4 +32,12 @@ String.instance_methods.grep /^z/
 overwriting existing methods of the same name and cause a previously
 reliable and stable method to break
 * The superclass of a class is Module - a class is simply a Module with
-3 additional instance methods: new, allocate, superclass
+3 additional instance methods: new, allocate, superclass!
+* **Namespace**: A module that exists only to be a container of
+constants
+* Loading & requiring: `load` is used for execution, has the side effect
+of polluting a program with the loaded file's constants. Can pass `true`
+as a second argument to the `load` call to keep the file's constants
+contained. This is accomplished by wrapping the file in a newly created
+anonymous namespace. `require` is used to loading libraries, and keeps
+the constants in the program so that we can use them!
