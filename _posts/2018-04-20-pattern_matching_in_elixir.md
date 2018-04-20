@@ -12,7 +12,7 @@ between `dig` and variable assignment.
 Let's work through different uses of pattern matching using the
 following list of maps:
 
-%{ highlight elixir %}
+{% highlight elixir %}
 iex(15)> hiphopheads = [%{name: 'Pharoahe Monch', group: 'Organized
 Konfusion'}, %{name: 'Qtip', group: 'ATCQ'}, %{name: 'Imani', group: 'The Pharcyde'}, %{name: 'Irrelevant', group: 'Nickelback'}]
 
