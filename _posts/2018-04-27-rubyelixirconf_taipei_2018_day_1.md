@@ -57,10 +57,12 @@ being performed, a different result is observed, or a response is taking
 too long
 * Circuit breakers can be applied to "self-heal" an application. It has
 three states:
-- Closed: System is working correctly
-- Open: System failures are too high, so respond with a cached
+  * Closed: System is working correctly
+  * Open: System failures are too high, so respond with a cached
 page/data, add the failed request to a retry queue, or show a nice error
 page
+  * Half-open: Self healing mode, try executing contained function at
+  random intervals to ascertain failure
 
 # Moving millions of dollars daily with Ruby while still being able to sleep at night by Sihui Huang
 
@@ -68,18 +70,18 @@ page
 be bugs and being ready to fix them" This is an interesting statement.
 * The payments team at Gusto shared a number of best practices to help
 identify and prioritize bugs faster:
-- Setup chat bot alerts with different levels of severity to notify
-on-call engineer and payments team
-- Raise errors often and as soon as possible, this allows for faster
-diagnose of where things are going wrong
-- Sidekiq job best practices included never saving state to a job. The
-job queue database can die, and there are issues with serializing
-objects so just pass the object id
-- Split large transaction amounts into smaller transactions. It's better
-for a couple of smaller transaction jobs to fail than one large amount
-transaction.
-- One query per job (one read + one write)
-- Jobs should be idempotent and transactional
+  * Setup chat bot alerts with different levels of severity to notify
+  on-call engineer and payments team
+  * Raise errors often and as soon as possible, this allows for faster
+  diagnose of where things are going wrong
+  * Sidekiq job best practices included never saving state to a job. The
+  job queue database can die, and there are issues with serializing
+  objects so just pass the object id
+  * Split large transaction amounts into smaller transactions. It's better
+  for a couple of smaller transaction jobs to fail than one large amount
+  transaction.
+  * One query per job (one read + one write)
+  * Jobs should be idempotent and transactional
 
 # ActiveModel::Errors and AdequateErrors by lulalala
 
