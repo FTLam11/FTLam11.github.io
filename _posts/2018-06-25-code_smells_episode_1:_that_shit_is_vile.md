@@ -10,8 +10,8 @@ Mapping code smells and how to get rid of those dank odors.
 | ----- | ---------- | ------- |
 | **Duplicated code** | Same expression in two or more methods of the
 same class | `Extract Method` |
-|                     | Same expression in two sibling subclasses |
-`Extract Method`, `Pull Up Method` |
+|                | Same expression in two sibling subclasses | `Extract
+Method`, `Pull Up Method` |
 |                | Similar expressions but not the same | `Extract
 Method`, `Form Template Method` |
 |                | Methods that do same thing with different approaches
@@ -20,3 +20,12 @@ Method`, `Form Template Method` |
 | `Extract Surrounding Method` |
 |                | Same expressions in two or more unrelated classes |
 `Extract Class`, `Extract Module` |
+| **Long method**  | Too many temporary variables | `Replace Temp with
+Query`, `Replace Temp with Chain` |
+|                | Too many method parameters | `Introduce Parameter
+Object`, `Preserve Whole Object` |
+|                | Still too many method parameters | `Replace Method
+with Method Object` |
+|                | Conditional expressions | `Decompose Conditional` |
+|                | Conditional expressions | `Collection Closure
+Methods` |
