@@ -27,5 +27,12 @@ Object`, `Preserve Whole Object` |
 |                | Still too many method parameters | `Replace Method
 with Method Object` |
 |                | Conditional expressions | `Decompose Conditional` |
-|                | Conditional expressions | `Collection Closure
-Methods` |
+|                | Loops | `Collection Closure Methods` |
+| **Large class** | Too many responsibilities | `Extract Class`,
+`Extract Subclass`, `Extract Module` |
+| **Long parameter list** | Parameter data can be obtained by asking an
+object | `Replace Parameter with Method` |
+|                | Multiple parameters are sourced from an object |
+`Preserve Whole Object` |
+|                | Multiple parameters are sourced from no logical
+object | `Introduce Parameter Object`, `Introduce Named Parameter` |
