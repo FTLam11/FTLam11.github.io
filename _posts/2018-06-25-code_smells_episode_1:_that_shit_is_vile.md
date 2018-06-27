@@ -36,3 +36,13 @@ object | `Replace Parameter with Method` |
 `Preserve Whole Object` |
 |                | Multiple parameters are sourced from no logical
 object | `Introduce Parameter Object`, `Introduce Named Parameter` |
+| **Divergent Change** | Class is often changed in different ways for
+different reasons | `Extract Class` |
+| **Shotgun Surgery** | One change requires a slew of changes in a lot
+of different areas | `Move Method`, `Move Field`, `Inline Class` |
+| **Feature Envy** | A method that seems more interested in another
+class than its own | `Move Method`, `Extract Method` |
+| **Data Clumps** | Multiple data items that appear as instance
+variables | `Extract Class` |
+|                 | Multiple data items that appear as method parameters
+| `Introduce Parameter Object`, `Preserve Whole Object` |
