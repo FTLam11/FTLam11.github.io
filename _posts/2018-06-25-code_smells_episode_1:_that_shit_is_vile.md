@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  code smells episode 1: that shit is vile
+title:  code smells episode 1 - that shit is vile
 date:   2018-06-25
 tags: [ruby]
 ---
