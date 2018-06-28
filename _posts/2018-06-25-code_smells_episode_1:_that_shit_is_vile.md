@@ -56,3 +56,24 @@ together | `Extract Class` |
 |                 | Excessive primitives in parameter list | `Introduce
 Parameter Object` |
 |                 | Dissecting array | `Replace Array with Object` |
+| **Case Statements** | Multiple case statements in different places
+that all need to be updated when new requirements are introduced |
+`Extract Method`, `Move Method`, `Replace Type Code with Polymorphism`,
+`Replace Type Code with Module Extension`, `Replace Type Code with
+State/Strategy` |
+|                 | Limited number of case statements | `Replace
+Parameter with Explicit Methods` |
+|                 | Have a nil case conditional | `Introduce Null
+Object` |
+| **Parallel Inheritance Hierarchies** | Special case of Shotgun Surgery
+where everytime a subclass is created from one class, another subclass
+must also be created | `Move Method`, `Move Field` |
+| **Lazy Class** | Classes or modules that aren't doing enough |
+`Collapse Hierarchy` |
+|                | Classes or modules that are borderline useless |
+`Inline Class`, `Inline Module` |
+| **Speculative Generality** | Classes or modules that aren't doing
+enough | `Collapse Hierarchy` |
+|                | Unnecessary delegation | `Inline Class` |
+|                | Methods with unused parameters | `Remove Parameter` |
+|                | Methods with odd names | `Rename Method` |
