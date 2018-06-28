@@ -77,3 +77,9 @@ enough | `Collapse Hierarchy` |
 |                | Unnecessary delegation | `Inline Class` |
 |                | Methods with unused parameters | `Remove Parameter` |
 |                | Methods with odd names | `Rename Method` |
+| **Temporary Field** | An object whose instance variables are set only
+in certain conditions | `Extract Class`, `Introduce Null Object` |
+| **Message Chains** | Long method chains that enforce tightly coupled
+code | `Hide Delegate`, `Extract Method`, `Move Method` |
+| **Middle Man** | Encapsulation gone too far, e.g., when a class's
+interface has too many methods only delegating to other classes | `Remove Middle Man`, `Inline Method`, `Replace Delgation with Hierarchy` |
