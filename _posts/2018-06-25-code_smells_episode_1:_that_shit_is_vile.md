@@ -46,3 +46,13 @@ class than its own | `Move Method`, `Extract Method` |
 variables | `Extract Class` |
 |                 | Multiple data items that appear as method parameters
 | `Introduce Parameter Object`, `Preserve Whole Object` |
+| **Primitive Obsession** | Multiple individual data values as
+primitives | `Replace Data Value with Object` |
+|                 | Have conditionals that depend on typing | `Replace
+Type Code with Polymorphism`, `Replace Type Code with Module Extension`,
+`Replace Type Code with State/Strategy` |
+|                 | Have group of instance variables that should go
+together | `Extract Class` |
+|                 | Excessive primitives in parameter list | `Introduce
+Parameter Object` |
+|                 | Dissecting array | `Replace Array with Object` |
