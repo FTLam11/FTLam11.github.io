@@ -46,3 +46,7 @@ Mapping code smells and how to get rid of those dank odors.
 | **Temporary Field** | An object whose instance variables are set only in certain conditions | `Extract Class`, `Introduce Null Object` |
 | **Message Chains** | Long method chains that enforce tightly coupled code | `Hide Delegate`, `Extract Method`, `Move Method` |
 | **Middle Man** | Encapsulation gone too far, e.g., when a class's interface has too many methods only delegating to other classes | `Remove Middle Man`, `Inline Method`, `Replace Delgation with Hierarchy` |
+| **Inapproppriate Intimacy** | Classes that are too tightly coupled, often interacting with private parts | `Move Method`, `Move Field`, `Change Bidirectional Association to Unidirectional`, `Extract Class`, `Hide Delegate`, `Replace Inheritance with Delegation` |
+| **Alternative Classes with Different Interfaces** | Methods with different interfaces that perform the same function | `Rename Method`, `Move Method`, `Extract Module`, `Introduce Inheritance` |
+| **Incomplete Library Class** | Existing library class missing functionality | `Move Method` |
+| **Data Class** | Classes that have attributes and no other behavior or responsibility | `Remove Setting Method`, `Encapsulate Collection`, `Move Method`, `Extract Method`, `Hide Method` |
