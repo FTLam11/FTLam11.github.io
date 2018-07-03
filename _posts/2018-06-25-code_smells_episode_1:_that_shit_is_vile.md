@@ -50,3 +50,12 @@ Mapping code smells and how to get rid of those dank odors.
 | **Alternative Classes with Different Interfaces** | Methods with different interfaces that perform the same function | `Rename Method`, `Move Method`, `Extract Module`, `Introduce Inheritance` |
 | **Incomplete Library Class** | Existing library class missing functionality | `Move Method` |
 | **Data Class** | Classes that have attributes and no other behavior or responsibility | `Remove Setting Method`, `Encapsulate Collection`, `Move Method`, `Extract Method`, `Hide Method` |
+| **Refused Bequest** | Light to moderate misuse of inheritance: subclasses that do not need parent class's data and behavior | `Push Down Method` |
+|  | Severe misuse of inheritance: subclasses that do not support parent class's public methods | `Replace Inheritance with Delegation` |
+| **Comments** | Comments explaining a method | `Extract Method` |
+|  | Comments explaining a method that has already been extracted | `Rename Method` |
+|  | Comments declaring rules about required system state | `Introduce Aasserion` |
+| **Metaprogramming Madness** | Situations where `method missing` is not required | `Replace Dynamic Receptor with Dynamic Method Definition`, `Extract Method` |
+|  | Situations where `method missing` is required | `Isolate Dynamic Receptor` |
+| **Disjointed API** | Utilizing a library where a limited subset of configuration options are repeatedly reused | `Introduce Gateway`, `Introduce Expression Builder` |
+| **Repetitive Boilerplate** | Overwhelming instances of duplication | `Extract Method`, `Introduce Class Annotation` |
