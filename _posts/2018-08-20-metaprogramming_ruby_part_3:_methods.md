@@ -23,17 +23,17 @@ sent while the code is running.
 ### Dynamic Method
 
 * Can define methods at runtime
-* Module#define_method can be used to define methods at runtime instead of the usual def keyword
+* `Module#define_method` can be used to define methods at runtime instead of the usual `def` keyword
 
 ### method_missing
 
-* Private instance method defined in BasicObject and inherited by all classes
-* Overriding method_missing: takes method, arguments, and block
+* Private instance method defined in `BasicObject` and inherited by all classes
+* Overriding `method_missing`: takes method, arguments, and block
 
 ### Ghost Methods
 
-* Instead of defining similar methods repeatedly, can respond to these method calls through method_missing
-* When calling respond_to?, respond_to_missing? is called to check if the method is truly a ghost method.
-* When overriding method_missing, should also override respond_to_missing?
+* Instead of defining similar methods repeatedly, can respond to these method calls through `method_missing`
+* When calling `respond_to?`, `respond_to_missing?` is called to check if the method is truly a ghost method.
+* When overriding `method_missing`, should also override `respond_to_missing?`
 * When the name of a ghost method conflicts with name of a real method, latter always wins
-* Blank Slate: Can directly inherit from BasicObject to minimize chance of method name conflicts
+* Blank Slate: Can directly inherit from `BasicObject` to minimize chance of method name conflicts
