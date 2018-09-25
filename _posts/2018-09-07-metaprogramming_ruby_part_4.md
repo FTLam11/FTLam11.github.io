@@ -14,9 +14,9 @@ Noting highlights from the book Metaprogramming Ruby (2nd Edition).
 
 * When program changes scope, some bindings are replaced by a new set of bindings
 * Scope Gates: Places where a program leaves the previous scope behind and opens a new scope
-..* Class definitions
-..* Module definitions
-..* Methods
+  * Class definitions
+  * Module definitions
+  * Methods
 * Flat Scope: Passing objects through scope gates
 
 ```ruby
