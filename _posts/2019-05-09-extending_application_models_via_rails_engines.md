@@ -66,12 +66,12 @@ the mattr_accessors that targeted the host models and use `Kernel.send`
 to include the module inside the `to_prepare` hook. Not sure how I feel
 about this, it is very transparent from the host application
 perspective, but I'd need to define mattr_accessor placeholders on the
-engine side as well as setting up initializers on the host application
+engine side as well as set up initializers on the host application
 side to get the right includes.
 
 [Another approach](https://stackoverflow.com/questions/36717540/extending-applications-model-in-rails-engine)
-was to use the `Module.included` hook and explicitly declare these in the necessary host application models/controllers.
-The first answer has a great explanation for this approach.
+was to use the `Module.included` hook and explicitly declare includes in the necessary host application models/controllers.
+The first answer in the link has a great explanation for this approach.
 
 TLDR:
 
