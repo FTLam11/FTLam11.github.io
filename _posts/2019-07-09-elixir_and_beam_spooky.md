@@ -5,11 +5,11 @@ date:   2019-07-09
 tags: [elixir]
 ---
 
-[lol](https://pics.me.me/ending-a-recursive-function-ending-a-recursive-function-ending-a-38116677.png)
+![lol](https://pics.me.me/ending-a-recursive-function-ending-a-recursive-function-ending-a-38116677.png)
 
-[LoL](https://poohbot.com/wp-content/uploads/2018/03/yo-dawg-recursion-recursion-825x510.jpg)
+![LoL](https://poohbot.com/wp-content/uploads/2018/03/yo-dawg-recursion-recursion-825x510.jpg)
 
-[LOL](https://img.memecdn.com/recursion_o_170485.jpg)
+![LOL](https://img.memecdn.com/recursion_o_170485.jpg)
 
 So startled...
 
@@ -31,4 +31,4 @@ happens and no additional memory allocation occurs.
 
 lolwut, my noob face, one moar time for good measure tho
 
-[LoL](https://poohbot.com/wp-content/uploads/2018/03/yo-dawg-recursion-recursion-825x510.jpg)
+![LoL](https://poohbot.com/wp-content/uploads/2018/03/yo-dawg-recursion-recursion-825x510.jpg)
