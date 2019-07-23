@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Live TDD Demo: 12 Days of Xmas
+title:  Live TDD Demo - 12 Days of Xmas
 date:   2019-07-22
 tags: [ruby, testing, mob programming]
 ---
