@@ -14,7 +14,9 @@ tags: [jokes]
 ## General debugging
 
 > ME: FUCK YEAH.
+
 > COWORKER: 解決了！？
+
 > ME: NEW ERROR!
 
 ## Reading code a few months back
