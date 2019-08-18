@@ -57,7 +57,7 @@ tags: [jokes]
 
 *Bandcamp* fo sho.
 
-## The only and only programming fuel you truly need (well not really)
+## The one and only programming fuel you truly need (well not really)
 
 *McDonald's green tea*
 
