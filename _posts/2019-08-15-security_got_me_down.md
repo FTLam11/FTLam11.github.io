@@ -28,8 +28,8 @@ mam is a **JWT**?
 Aite, whole lotta shit going on here. Proceed to break it down, *in
 English pls*.
 
-1) A **JWT** is JuhSawn object. Dope shit.
-2) It is digitally signed using a secret (HMAC).
+1. A **JWT** is JuhSawn object. Dope shit.
+2. It is digitally signed using a secret (HMAC).
 
 Hold ur horses. Via [wikipedia](https://en.wikipedia.org/wiki/HMAC):
 
@@ -122,10 +122,10 @@ check the integrity of the JWT on each request, and this is where
 signing comes into play. Assuming a secret was used to sign the JWT, the
 server verifies the integrity by:
 
-1) Base64Url decode the JWT
-2) Split the JWT into original three period separated parts
-3) Use the secret to sign the first two parts
-4) Check the result signature is equal to the given signature
+1. Base64Url decode the JWT
+2. Split the JWT into original three period separated parts
+3. Use the secret to sign the first two parts
+4. Check the result signature is equal to the given signature
 
 This is where I started tripping. There was no decryption going on, the
 decoding of the JWT was simply running the signing process again to
