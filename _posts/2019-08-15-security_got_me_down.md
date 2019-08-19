@@ -7,11 +7,11 @@ tags: [ruby, security]
 
 # Security got me down
 
-While investigating the feasbility of using JWT for user authentication,
+While investigating the feasability of using JWT for user authentication,
 I continually hit many security related tangents. I'll have a post about
-my JWT findings soon, but for now I'd like to jot down some very
+my JWT findings soon, but for ~~now I'd like to jot down some very
 simplified explanations of security risks and how they are handled by
-Rails. I can hopefully do a little mythbustin' too!
+Rails~~. I can hopefully do a little mythbustin' too!
 
 ## Enter the Dragon
 
@@ -134,4 +134,5 @@ Assuming some shithead modified the JWT contents, the integrity check
 would fail since the secret used to sign the JWT is not known. OK.
 
 Next time, I'll plan on tackling JWT encryption, the role of refresh
-tokens, and compare/contrast JWTs and sessions.
+tokens, and compare/contrast JWTs and sessions and potential security
+risks involved.
