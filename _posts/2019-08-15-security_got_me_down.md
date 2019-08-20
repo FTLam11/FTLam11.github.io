@@ -105,13 +105,13 @@ authentication workflow using JWT.
 When a client successfully authenticates with the server using their
 credentials, the server responds with a JWT and refresh token. The JWT
 specification has a number of required/arbitrary *"claims"* (information
-fields). Depending on the authentication scheme, a **stateless** JWT may
+fields). Depending on the authentication scheme, a **stateful** JWT may
 contain a session ID that the server can query to obtain the actual
-session information. A **stateful** JWT actually has the session
+session information. A **stateless** JWT actually has the session
 information directly contained in its claims.
 
 Assuming the JWT is signed but *not encrypted*, anyone can read the
-contents of the JWT. In the case of a **stateful** JWT, claims such as
+contents of the JWT. In the case of a **stateless** JWT, claims such as
 *sub* (a user ID) or another claim indicating admin privileges can be
 exposed. So what if this information was stolen and manipulated by some
 shithead?
