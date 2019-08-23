@@ -241,7 +241,6 @@ DEPENDENCIES
   jekyll
   jekyll-feed (~> 0.6)
   minima
-  tzinfo-data
 
 RUBY VERSION
    ruby 2.5.1p57
