@@ -73,7 +73,7 @@ the [RFC](https://tools.ietf.org/html/rfc7516), good luck XD.
 JWT invalidation is kinda fucked up. There is a standard `exp` claim
 that specifies when the JWT expires. That's cool, but what if there is a
 need to revocate a single JWT on demand? Some shithead stole my JWT! I
-don't think waiting for it to expire is good. What is there is no `exp`
+don't think waiting for it to expire is good. What if there is no `exp`
 claim (this probably not a best practice)? Also, JWT tokens should be
 invalid upon password changes? What are some strats for invalidating JWTs?
 
