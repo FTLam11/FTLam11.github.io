@@ -47,3 +47,60 @@ different Pandora's box so I digress.
 4. [https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/](https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/)
 5. [https://www.toptal.com/ruby/ruby-concurrency-and-parallelism-a-practical-primer](https://www.toptal.com/ruby/ruby-concurrency-and-parallelism-a-practical-primer)
 6. [https://dev.to/enether/working-with-multithreaded-ruby-part-i-cj3](https://dev.to/enether/working-with-multithreaded-ruby-part-i-cj3)
+
+# On HTTP
+
+* HTTP uses TCP standard to faciliate communication
+* TPC is a network protocol that allows two hosts to connect and
+exchange data streams. TCP guarantees order of data delivery.
+* Request format - HTTP verb, resource path, protocol, headers, body
+* Response format - protocol, status code, status message, headers, body
+* HTTP messages will not be human readable anymore with HTTP/2 -
+messages are put into a binary structure called **frame**.
+
+### Caching
+
+Caching is a vicious technique in which a copy of a resource is served
+instead of the latest and greatest resource. For general stuff that
+doesn't change much, this can be a great boon for servers, since clients
+that request the cached resources won't need to make the full request
+trip. The cached resource can be served directly from the client's cache
+or by some intermediate proxy, speeding up response times and minimizing
+network bandwidth.
+
+The `Cache-Control` header has several directives that can be set by the
+server to instruct clients/caches what requests may be cached.
+
+* `no-store` - disallows caching
+* `no-cache` - cache checks with server to see if it can respond with a cached copy
+* `public` - response may be cached by any cache
+* `private` - response may only be cached by a private cache
+* `max-age=<seconds>` - the maximum time relative to the time of request
+that a resource can be considered fresh
+* `must-revalidate` - cache must check on freshness of resource so that
+expired copies are not used
+
+When a cached resource expires (note this does not imply that it is
+stale), the resource must be fetched again or validated on subsequent
+requests for it. The server may provide either a strong or weak
+validator to facilitate cache validation.
+
+The server response may contain the `ETag` header to represent a
+specific version of the requested resource. On subsequent client
+requests for the same resource, the `If-Match` or `If-None-Match`
+headers containing the `ETag` value can be sent to check if the resource
+is still fresh.
+
+Alternatively the server response may utilize the `Last-Modified` header
+as a weak validator, it is less accurate than the `ETag` header. Clients
+may use the `If-Modified-Since` or `If-Unmodified-Since` headers along
+with the `Last-Modified` value to check for freshness.
+
+When a requested resource is still fresh the server responds with 304.
+If the resource has been updated, it responds normally with the updated
+resource/200.
+
+### Sauces
+
+1. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+2. [https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
