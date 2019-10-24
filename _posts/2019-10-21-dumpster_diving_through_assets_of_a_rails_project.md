@@ -6,16 +6,16 @@ tags: [ruby, rails, webpacker]
 ---
 It's time to hold dat big phat "L". I volunteered to investigate why one
 of our Rails projects was taking forever (45+ minutes with occasional
-timeouts in our CI/CD pipeline). I had my suspicions of which build job
+timeouts in our CI/CD pipeline) to build. I had my suspicions of which build job
 was taking the longest and confirmed primary suspect numero uno: the
 infamous asset pipeline. I'm not blaming the tool, because I also knew
 no one on the team (including myself) had a solid understanding of our
-assets/front-end dependendies for the project.
+assets/front-end dependencies for the project.
 
-I'm gonna document as many anti-patterns as I find and what corrective
+I'm gonna document as many anti-patterns as I find and what ~~corrective
 actions I plan on taking to "optimize" management of all the JavaScript,
-CSS, fonts, images, etc... Lord have mercy on our souls. Roll up them
-sleeves, it's time to go deep in dumpster!
+CSS, fonts, images, etc...~~ Lord have mercy on our souls. Roll up them
+sleeves, it's time to go deep in the dumpster!
 
 # Ambiguous layouts
 
@@ -26,8 +26,8 @@ for internal use.
 
 In addition the layout `head` contains CDN links for fonts, stylesheets, and
 several JavaScript libraries. These should be included in the asset
-pipeline. In the case where the application with is hosted locally in a place
-without an internet connection, it's a real bad look.
+pipeline. In the case where the application is hosted locally in a place
+with strict internet connection management policies, it's a real bad look.
 
 # Vendor JavaScript littered across multiple directories
 
@@ -44,12 +44,12 @@ through searches.
 # Gems solely used to bundle JavaScript and related assets
 
 I guess I can rationalize and understand the original motivation for these
-gems. Before the Rails modernized its front-end assets management, lots
-of people relied on gems that convenient bundled popular JavaScript
+gems. Before Rails modernized its front-end assets management, lots
+of people relied on gems that conveniently bundled popular JavaScript
 libraries. Updating versions would be abstracted through updating gem
 versions, allowing the majority of Rails developers to interact solely
 through the bundler API. It was also super easy to just throw a couple
-`require` statements to load each library developers needed. Sprockets
+`require`/`require_tree` statements to load each library developers needed. Sprockets
 did the heavy lifting of finding each dependency, with a little help
 from configuring asset paths.
 
@@ -61,8 +61,7 @@ improvements during precompilation.
 
 Gemfiles would also become less bloated, allowing applications to boot
 faster! Can't hate on that! The application I'm working on upgrading has
-~15-20 of these gems and has a pretty awful load time (without spring
-and bootsnap).
+~15-20 of these gems and has a pretty awful load time (without spring).
 
 # javascript_include_tag littered across layouts
 
@@ -78,7 +77,7 @@ I came across a shit load of custom "utility" JavaScript files that do not
 export anything. Because the sprockets `require` directive merely
 appends the contents of a target file, it is super easy to call random
 functions and reference variables wherever anyone wants. Essentially
-everything shares the scope, and things aren't isolated. It's convenient
+everything shares the same scope, and things aren't isolated. It's convenient
 and we can just write braindead jQuery shit without ever thinking about
 what actual dependencies are needed/where? Lord have mercy, get me out
 of this fucking game.
@@ -95,19 +94,19 @@ shit is worse than cancer. STAY OFF THIS SHIT.
 
 Yeah, this has just turned into a rant. At times our Rails projects
 receives help from dedicated front-end developers, and I'd wager that
-they experience mind-numbing levels of shock after seeing how much
+they experience mind-numbing levels of shock after seeing how mass
 spaghetti JavaScript and having to dig out library versions from gem
 documentation/source code instead of checking `package.json`.
 
 # Closing
 
-Let us embrace our modern front-end overlords:
+~~Let us embrace modern front-end~~ FRONT-END DEVELOPMENT MATTERS:
 
 > May we have discipline when choosing dependencies.
 
 > May we actually understand our dependencies.
 
 > May we have the basic mental capability to use these dependencies
-> correctly.
+> in exemplary manners.
 
-Worst legacy project update experience ever. Kum-bay-fuckin-ya. LOL
+Worst legacy project update experience ever. Kum-bay-fuckin-ya. LUL
