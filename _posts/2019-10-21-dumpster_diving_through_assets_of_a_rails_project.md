@@ -106,7 +106,6 @@ documentation/source code instead of checking `package.json`.
 
 > May we actually understand our dependencies.
 
-> May we have the basic mental capability to use these dependencies
-> in exemplary manners.
+> May we use these dependencies in exemplary manners.
 
 Worst legacy project update experience ever. Kum-bay-fuckin-ya. LUL
