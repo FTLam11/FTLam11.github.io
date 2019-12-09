@@ -48,7 +48,7 @@ example I'd use to explain it:
 
 And this is how I'd explain why the example is relevant:
 
-1. What is recursion?
+What is recursion?
 
 > Recursion aims to: Take a problem that we might not really know how
 > to solve off the bat, and slowly break it down into smaller problems
@@ -56,13 +56,13 @@ And this is how I'd explain why the example is relevant:
 > with slightly different arguments that get us closer to solving the
 > problem.
 
-2. What is the easiest problem to solve?
+What is the easiest problem to solve?
 
 > The easiest problem to solve is one that doesn't need any solving,
 > (Caveat: depends on if one is using tail or non-tail recursion, ignore for now)
 
 
-3. If recursion revolves around breaking problems down into easier problems,
+If recursion revolves around breaking problems down into easier problems,
 how do we know when to stop recursing?
 
 > People often use the term base case to serve as a stop condition for
