@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  I GET MAD: devops edition
+title:  I GET MAD - devops edition
 date:   2019-12-17
-tags: [devops]
+tags: [devops, work culture, jokes, docker]
 ---
 Ｉｔ＇ｓ　ｂｅｅｎ　ｄａｙｓ　ｓｉｎｃｅ　Ｉ　ｗｏｒｋｅｄ　ｏｎ　ｍｙ　ａｓｓｉｇｎｅｄ　ａｐｐｌｉｃａｔｉｏｎｓ　ａｔ　ｗｏｒｋ．
 
