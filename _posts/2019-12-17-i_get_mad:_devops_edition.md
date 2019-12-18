@@ -19,3 +19,6 @@ tags: [devops, work culture, jokes, docker]
 Ｂｕｔ　Ｉ　ｈａｖｅ　ｎｏ　ｗａｙ　ｏｆ　ｖｅｒｉｆｙｉｎｇ　ｔｈｉｓ，　ｉｔ＇ｓ　ｐｕｒｅ　ｃｏｎｊｅｃｔｕｒｅ．
 
 Ｓｅｎｄ　ｈｅｌｐ　ｐｌｅａｓｅ，　ａ　ｄｅｅｐ－ｄｉｓｈ　ｐｉｚｚａ　ｗｏｕｌｄ　ｂｅ　ｇｒｅａｔ　ｔｏｏ．
+
+Update 2019-12-18: lul build server changed hardware, allocated memory
+was not enough to precompile assets.
