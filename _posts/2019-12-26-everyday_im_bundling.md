@@ -18,8 +18,8 @@ issues with trying to handle platform-specific gems like
 [issues](https://github.com/bundler/bundler/issues/7076).
 
 I generally develop without using Docker, so this was an opportunity to
-learn about this conundrum. Docker for macOS uses the `x86_64-linux
-` platform, so when Docker failed to bundle successfully, I saw that
+learn about this conundrum. Docker for macOS uses the `x86_64-linux`
+platform, so when Docker failed to bundle successfully, I saw that
 my gem sources was missing the `google-protobuf` gem. Looking further
 into it, I had to enable a couple options for `bundle config`:
 
@@ -40,11 +40,12 @@ The local flag is interesting since bundler will install gems directly
 using `vendor/cache` as the gem source, avoiding gem downloads from
 RubyGems, GitHub, etc...
 
-I ended up with the following production Dockerfile. Builds are super
-fast, I've never been this excited about our CI/CD pipeline! The image
-takes ~4 minutes to build, and that's with the Docker cache being busted
-early on. Most builds should be able to use layer cache up until the `COPY .
-/usr/src/app` step. Zaaaaaaaaaaaaangggggggg.
+I ended up with the following production Dockerfile. The last step is
+overridden with kubernetes. Builds are super fast, I've never been this
+excited about our CI/CD pipeline! The image takes ~4 minutes to build,
+and that's with the Docker cache being busted early on. Most builds should
+be able to use layer cache up until the `COPY . /usr/src/app` step.
+Zaaaaaaaaaaaaangggggggg.
 
 ```
 FROM ruby:2.6.4
